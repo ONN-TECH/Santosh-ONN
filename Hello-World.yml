@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  - name: Check connectivity between all nodes
+    ping:
+    

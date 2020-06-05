@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: checking connectivity
+    ping:
+  - name: Update Packages 
+    apt:
+      name: git
+      update_cache: yes
+      state: present
+  - name: Installing tree package
+    apt: 
+      name: tree
+      state: present
